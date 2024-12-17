@@ -7,7 +7,7 @@ read -p "question: " ques
 mkdir -p ./src/$mv_dir
 mv $sendfile "./src/${mv_dir}/${ques}.go"
 git add ./src/$mv_dir/$ques.go
-gc "${mv_dir} ${ques} resolved."
+git commit -m "${mv_dir} ${ques} resolved."
 
 cp_file="./src/template/main.go"
 
