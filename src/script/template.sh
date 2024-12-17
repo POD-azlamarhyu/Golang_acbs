@@ -1,0 +1,1 @@
+cp "./src/template/main.go" "./main.go" 
