@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func createArray(n int) []int{
+func createArrayloopInput(n int) []int{
 	sc := bufio.NewScanner(os.Stdin)
 	sc.Scan()
 	line := strings.Fields(sc.Text())
@@ -18,6 +18,34 @@ func createArray(n int) []int{
 		a[i], _ = strconv.Atoi(line[i])
 	}
 
+	return a
+}
+
+func createArraySplitSpace(n int) []int{
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	line := strings.Split(sc.Text()," ")
+	var a []int
+	for _, input := range line{
+		p, _ := strconv.Atoi(input)
+		a = append(a, p)
+	}
+	return a
+}
+
+func create2dimArraySplitSpace(n int) [][]int{
+	sc := bufio.NewScanner(os.Stdin)
+	
+	var a [][]int
+
+	for i := 0; i<n; i++{
+		sc.Scan()
+		line := strings.Split(sc.Text()," ")
+		for j := 0; j < len(line); j++{
+			p, _ := strconv.Atoi(line[j])
+			a[i] = append(a[i], p)
+		}
+	}
 	return a
 }
 
