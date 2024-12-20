@@ -11,7 +11,7 @@ echo -e move directory: "./src/${mv_dir}/${contest}"
 mkdir -p "./src/${mv_dir}/${contest}"
 mv $sendfile "./src/${mv_dir}/${contest}/${ques}.go"
 git add ./src/$mv_dir/$contest/$ques.go
-git commit -m "${mv_dir} ${ques} resolved."
+git commit -m "abc ${mv_dir} ${contest} ${ques} resolved."
 
 cp_file="./src/template/main.go"
 
